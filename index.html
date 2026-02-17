@@ -44,20 +44,21 @@
 <body>
 
     <model-viewer 
-        src="Jturn.glb" 
-        ios-src="Jturn.usdz"
-        ar 
-        ar-modes="quick-look webxr scene-viewer" 
-        camera-controls 
-        shadow-intensity="1">
-        
-        <button slot="ar-button" id="ar-button">
-            👋 VIEW IN AR
-        </button>
-
-    </model-viewer>
+    src="Jturn.glb" 
+    ios-src="Jturn.usdz"
+    ar 
+    ar-modes="scene-viewer quick-look webxr" 
+    camera-controls 
+    shadow-intensity="1"
+    autoplay 
+    animation-name="Running"> 
+    <button slot="ar-button" id="ar-button">
+        👋 VIEW IN AR
+    </button>
+</model-viewer>
 
 </body>
 </html>
+
 
 
