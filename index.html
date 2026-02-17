@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
+
+    <style>
+      body, html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      model-viewer {
+        width: 100%;
+        height: 100%;
+        background-color: #eee;
+      }
+
+      /* THE BIG BUTTON */
+      #ar-button {
+        background-color: #4285f4;
+        color: white;
+        border-radius: 10px;
+        border: none;
+        padding: 20px 40px;
+        font-size: 22px;
+        font-weight: bold;
+        
+        /* Positioning it slightly higher so browser bars don't block it */
+        position: absolute;
+        bottom: 100px; 
+        left: 50%;
+        transform: translateX(-50%);
+        
+        z-index: 999; /* Ensures it is on the very top layer */
+        display: block; /* Ensures it is treated as a clickable box */
+      }
+    </style>
+</head>
+<body>
+
+    <model-viewer 
+        src="roar4.glb" 
+        ios-src="dinoA.usdz"
+        ar 
+        ar-modes="quick-look webxr scene-viewer" 
+        camera-controls 
+        shadow-intensity="1">
+        
+        <button slot="ar-button" id="ar-button">
+            👋 VIEW IN AR
+        </button>
+
+    </model-viewer>
+
+</body>
+</html>
+
